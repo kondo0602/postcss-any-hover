@@ -1,33 +1,50 @@
 {
   "name": "postcss-any-hover",
   "version": "1.0.0",
-  "description": "PostCSS plugin that extracts and wraps rules containing `:hover` pseudo-classes in `@media (any-hover: hover) {}` media queries",
-  "keywords": ["postcss", "css", "postcss-plugin", "postcss-any-hover", "hover", "any-hover"],
-  "scripts": {
-    "unit": "node --test index.test.js",
-    "test": "npm run unit && eslint ."
-  },
-  "author": "kondo0602",
+  "description": "A PostCSS plugin that wraps `:hover` selectors with `@media (any-hover: hover) {}` to ensure hover effects only apply on hoverable devices",
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "postcss-any-hover",
+    "hover",
+    "any-hover"
+  ],
   "license": "MIT",
-  "repository": "kondo0602/postcss-any-hover",
-  "engines": {
-    "node": ">=18.0.0"
+  "author": "kondo0602",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kondo0602/postcss-any-hover.git"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "vitest",
+    "test:watch": "vitest watch"
+  },
+  "devDependencies": {
+    "eslint": "^8.47.0",
+    "postcss": "^8.4.27",
+    "postcss-selector-parser": "^7.1.0",
+    "rollup": "^4.40.1",
+    "vitest": "^3.1.2"
   },
   "peerDependencies": {
     "postcss": "^8.4.27"
   },
-  "devDependencies": {
-    "eslint": "^8.47.0",
-    "postcss": "^8.4.27"
+  "engines": {
+    "node": ">=18.0.0"
   },
   "eslintConfig": {
+    "extends": [
+      "eslint:recommended"
+    ],
     "parserOptions": {
-      "ecmaVersion": 2017
+      "ecmaVersion": 2017,
+      "sourceType": "module"
     },
     "env": {
       "node": true,
       "es6": true
-    },
-    "extends": ["eslint:recommended"]
+    }
   }
 }
