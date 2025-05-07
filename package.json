@@ -1,6 +1,6 @@
 {
   "name": "postcss-any-hover",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A PostCSS plugin that wraps `:hover` selectors with `@media (any-hover: hover) {}` to ensure hover effects only apply on hoverable devices",
   "keywords": [
     "postcss",
